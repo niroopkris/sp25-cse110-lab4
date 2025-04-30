@@ -1,16 +1,14 @@
-let students = {
-	name: 'Sarah',
-	major: 'Computer Science',
-	'Grad Year': '2022', 
-	greeting: function() { console.log('Hello!'); },
-	'Favorite Teacher': {
-		name: 'Thomas Powell',
-		course: 'CSE 110'
-	},
-	courseLoad: ['CSE 110', 'CSE 134', 'VIS 41']
+let statistics = {
+    redCars: 21,
+    blueCars: 45,
+    greenCars:12,
+    raceCars:5,
+    blackCars: 40,
+    rareCars: 2
 };
 
-console.log(students["Grad Year"]);
-console.log(students.greeting());
-console.log(students["Favorite Teacher"].name);
-console.log(students.courseLoad[0]);
+for (const property in statistics) {
+    if (property.startsWith("r") || (statistics[property] % 2 == 1)) {
+        console.log(`${statistics[property]}`);
+    }
+}

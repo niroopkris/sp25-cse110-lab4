@@ -18,3 +18,29 @@
      - `students["Favorite Teacher"].name`
      - `students.courseLoad[0]` 
 13. 
+    - `"32"` since the integer `2` is turned into a string and concatenated with `"3"`
+    - `1` since the string `"3"` is turned into an integer so it can be subtracted by `2`
+    - `3` since `null` maps to 0 and is added to `3`
+    - `3null` since `null` is mapped to a string so it can concatenated with `"3"`
+    - `4` since `true` maps to the integer `1` so it can be added to `3`
+    - `0` since both `false` and `null` map to the integer 0, and thus sum to 0
+    - `3undefined` since `undefined` maps to a string and is concatenated with `"3"`
+    - `NaN` since for math operations, `undefined` becomes `NaN` and is thus what is returned
+14. 
+    - `true` since `"2"` becomes an integer and `2 > 1`
+    - `false` since dictionary comparison is used (as both are strings), and character `"2"` is greater than character `"1"` 
+    - `true` since `"2"` is converted to an integer `2`
+    - `false` since this is a stricter type-checking equality, and `2` and `"2"` are different types
+    - `false` since `true` maps to the integer `1` and `1 != 2`
+    - `true` since `Boolean(2)` results in the boolean `true`
+15. `==` doesn't have strict type-checking unlike `===`, so you can compare different data types and sometimes get a `true` result due to Javascript mapping variables to other types to make the comparison possible. `===` will return `false` ALWAYS if the two variables are different data types.
+17. The resulting array returned is `[2,4,6]`. Within `modifyArray` we loop through each element in the array `[1,2,3]` and then pass each element as an argument to the `doSomething` function before adding it to our new array. The function will return the element multiplied by 2. Thus, we get `[2,4,6]`
+19. The output is the code block below:
+```
+1
+4
+3
+2
+```
+
+
