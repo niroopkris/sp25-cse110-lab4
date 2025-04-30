@@ -1,0 +1,2 @@
+1. The bug is that `num1` and `num2` are string variables, so when it tries to add them together, it concatenates them instead.
+2. To fix this, I went to the initialization statements of `num1` and `num2` and wrapped the right-side expression with `Number()` so that these variables became integers and would add together properly.
